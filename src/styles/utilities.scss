@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$titleFont: 'Montserrat', sans-serif;
+$parFont: 'Roboto', sans-serif;
+$sans: 'Open Sans', sans-serif;
+$titleColor: #0c3c3d;
+$buttonColor: #34d1d1;
+$footerBackground: #e5f5f4;
+
+// Mixins
+@mixin bigPhoneAndUp() {
+  @media screen and (min-width: 30em) {
+    @content;
+  }
+}
+@mixin tabletAndUp {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+@mixin wideDesktopAndUp() {
+  @media screen and (min-width: 70em) {
+    @content;
+  }
+}
+@mixin monitorAndUp() {
+  @media screen and (min-width: 95rem) {
+    @content;
+  }
+}
+@mixin tabletAndDown {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
