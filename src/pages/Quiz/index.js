@@ -39,7 +39,6 @@ export default function Quiz() {
 
   return (
     <div data-aos="fade-right" className="quiz__container">
-      {JSON.stringify({ questions })}
       {!quizFinished && currentQuestionIdx < questions.length ? (
         <Question {...questions[currentQuestionIdx]} />
       ) : (

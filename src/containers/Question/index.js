@@ -13,7 +13,6 @@ export default function Question({ question, optionType, options }) {
   return (
     <section className="question__section">
       <h1 className="question__title">{question}</h1>
-      {JSON.stringify({ question })}
       <div className="question__list">
         {options
           ? options.map((option) => {
