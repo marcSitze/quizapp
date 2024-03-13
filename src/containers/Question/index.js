@@ -1,10 +1,11 @@
 import React from 'react';
 import ChoiceOption from '../ChoiceOption';
-import { useQuestionStore } from '../../store';
+import { useQuestionStore, useStore } from '../../store';
 import './style.scss';
-
+import json from '../../json/quiz.json';
 export default function Question({ question, optionType, options }) {
   const choose = useQuestionStore((state) => state.choose);
+  const currentIndex = useStore((state) => state.currentIndex);
 
   React.useEffect(() => {
     choose(null);
@@ -12,7 +13,9 @@ export default function Question({ question, optionType, options }) {
 
   return (
     <section className="question__section">
-      <h1 className="question__title">{question}</h1>
+      <h1 className="question__title">
+        {question} {`(${currentIndex + 1}/${json.questions.length})`}
+      </h1>
       <div className="question__list">
         {options
           ? options.map((option) => {
