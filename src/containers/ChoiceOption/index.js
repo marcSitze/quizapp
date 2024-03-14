@@ -1,15 +1,16 @@
 import React from 'react';
-import { selectChosenValue, useQuestionStore, useStore, resultsValue } from '../../store';
+import { selectChosenValue, useQuestionStore, useStore } from '../../store';
 
 import TextOption from '../../components/Option/TextOption';
 import ImageOption from '../../components/Option/ImageOption';
 
 import './style.scss';
+import findMostOccurringValue from '../../utils/findMostOccuringValue';
 
 function ChoiceOption({ title, value, type }) {
   const chosenValue = useQuestionStore(selectChosenValue);
-  const results = useStore(resultsValue);
-  // console.log("results: ", results)
+  const results = useStore((state) => state.results);
+  console.log("results: ", findMostOccurringValue(results))
   // console.log("chosenValue: ", chosenValue)
   const choose = useQuestionStore((state) => state.choose);
   const handleSelect = React.useCallback(() => {
