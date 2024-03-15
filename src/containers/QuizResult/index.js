@@ -14,11 +14,11 @@ export default function QuizResult() {
         result = result || results[questionIdx];
       }
     }
-
+    //697189997 // Valeri
     return result;
   }, [results]);
 
-  console.log("results: ", results)
+  console.log('results: ', results);
   return (
     <>
       <Link to="/" className="back__link">
@@ -26,27 +26,28 @@ export default function QuizResult() {
       </Link>
 
       <h1 className="quiz__result-message">
-        {quizResult ? (
-          <span>
-            Unfortunately, we are unable to prescribe this medication for you.
-            This is because finasteride can alter the PSA levels, which maybe
-            used to monitor for cancer. You should discuss this further with
-            your GP or specialist if you would still like this medication
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <span style={{ marginBottom: 20 }}>
+            Great news! We have the perfect match for you. just enter your email
+            to receive your results
           </span>
-        ) : (
-          <span>
-            Great news! We have the perfect treatment for your hair loss.
-            Proceed to{' '}
-            <a
-              href="https://www.manual.co"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              www.manual.co
-            </a>
-            , and prepare to say hello to your new hair!
-          </span>
-        )}
+          <div style={{ display: "flex"}}>
+            <input
+              style={{
+                width: 300,
+                height: 54,
+                border: '1px solid rgb(200, 200, 200)',
+                fontSize: 22,
+                padding: '10px 20px',
+                outline: 'none',
+              }}
+              placeholder="example@gmail.com"
+              type="email"
+              name="email"
+            />
+            <button>Submit</button>
+          </div>
+        </div>
       </h1>
     </>
   );
