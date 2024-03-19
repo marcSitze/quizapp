@@ -7,7 +7,7 @@ function TextOption({ title, selected }) {
       dangerouslySetInnerHTML={{
         __html: `<span class='ml-10'>${title}</span>`,
       }}
-      className={'choice-option option-text ' + (selected ? ' selected' : '')}
+      className={'choice-option option-text radioOption ' + (selected ? ' selected' : '')}
       data-testid="text-choice-option"
     ></div>
   );

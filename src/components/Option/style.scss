@@ -11,6 +11,18 @@
       $buttonColor;
   }
 
+  &.radioOption::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+    // background: url(../../assets/svg/choice-icon.svg) no-repeat center
+    //   $buttonColor;
+  }
+
   &.option-img img {
     margin: 0 auto 0 auto;
     display: block;
@@ -18,16 +30,17 @@
 
   &.option-text {
     display: block;
-    font-size: 2.25rem;
+    // font-size: 2.25rem;
+    font-size: 1.6rem;
     margin: 0 auto 0 auto;
-    text-align: center;
+    text-align: left;
 
     & > span {
       margin-left: 2.5rem;
     }
 
-    &.selected::before {
-      top: 1rem;
-    }
+    // &.selected::before {
+    //   top: 1rem;
+    // }
   }
 }
