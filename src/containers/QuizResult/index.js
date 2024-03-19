@@ -2,15 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../../store';
 import './style.scss';
-// import emailjs from '@emailjs/browser';
-// import { SMTPClient } from 'emailjs';
-// import nodemailer from 'nodemailer';
-// const client = new SMTPClient({
-// 	user: 'test@effortcamerounais.com',
-// 	password: 'wP5@1Pp4dfmnXn8',// wP5@1Pp4dfmnXn8
-// 	host: 'mail.effortcamerounais.com',//mail.effortcamerounais.com
-// 	ssl: true,
-// });
+import emailjs from '@emailjs/browser';
 
 export default function QuizResult() {
   const results = useStore((state) => state.results);
@@ -27,15 +19,6 @@ export default function QuizResult() {
     return result;
   }, [results]);
 
-  // const transporter = nodemailer.createTransport({
-  //   host: 'mail.effortcamerounais.com',
-  //   port: 587,
-  //   secure: true,
-  //   auth: {
-  //     user: 'test@effortcamerounais.com',
-  //     pass: 'wP5@1Pp4dfmnXn8',
-  //   },
-  // });
   const options = {
     from: 'test@effortcamerounais.com',
     to: 'marcsitze01@gmail.com',
@@ -44,32 +27,23 @@ export default function QuizResult() {
   };
   const sendEmail = async (e) => {
     e.preventDefault();
-    // emailjs.sendForm('service_rk1jqrt', 'template_hfp2t2g', "test email")
-    //     .then((result) => {
-    //         console.log(result.text);
-    //         console.log("message sent!")
-    //     }, (error) => {
-    //         console.log(error.text);
-    //         console.log("error sending message, try again!")
-    //     });
-    // client.send(
-    //   {
-    //     text: 'i hope this works',
-    //     from: 'test@effortcamerounais.com',
-    //     to: 'marcsitze01@gmail.com',
-    //     cc: 'else <else@your-email.com>',
-    //     subject: 'testing emailjs',
-    //   },
-    //   (err, message) => {
-    //     console.log(err || message);
-    //   }
-    // );
+    const templateParams = {
+      to_name: 'James',
+      from_name: 'Marc',
+      message: "My test message email"
+  };
+    emailjs.send('service_8atuzzc', 'template_hfp2t2g', templateParams, "WRPNTni4bSD_a6FeM")
+        .then((result) => {
+            console.log(result.text);
+            console.log("message sent!")
+        }, (error) => {
+            console.log(error.text);
+            console.log("error sending message, try again!")
+        });
+
     console.log("clicked...")
-    // const response = await transporter.sendMail(options);
-    // console.log("response: ", response)
     };
 
-  // console.log('results: ', results);
   return (
     <>
       <Link to="/" className="back__link">
