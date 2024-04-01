@@ -38,7 +38,11 @@ export default function Quiz() {
   }, [currentQuestionIdx]);
 
   return (
-    <div data-aos="fade-right" className="quiz__container">
+    <div
+      data-aos="fade-right"
+      className="quiz__container"
+      style={{ backgroundColor: 'lightgray' }}
+    >
       {!quizFinished && currentQuestionIdx < questions.length ? (
         <Question {...questions[currentQuestionIdx]} />
       ) : (

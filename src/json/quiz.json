@@ -14,6 +14,21 @@
           "Je respecte les attentes des autres dans mon travail, et je considère qu’ils ne m’aiment pas lorsqu’ils m’apportent des critiques.": 3
         }
       ]
+    },
+    {
+      "question": "Comment accueillez-vous les attente ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je ne tiens pas compte de ce que les autres attendent de moi dans mon travail. Mon point de vue suffit.": 1
+        },
+        {
+          "Je respecte les attentes des autres dans mon travail, et je considère qu’ils ne m’aiment pas lorsqu’ils m’apportent des critiques.": 2
+        },
+        {
+          "Je respecte les attentes des autres dans mon travail, et je considère qu’ils ne m’aiment pas lorsqu’ils m’apportent des critiques.": 3
+        }
+      ]
     }
   ]
 }
