@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Photo1 from '../../../assets/images/hair-photo-1-2-x.jpg';
+import Photo1New from '../../../assets/images/biographie.png';
 import Photo2 from '../../../assets/images/sex-photo-1-2-x.jpg';
 import './style.scss';
 
@@ -18,7 +19,7 @@ const Panel = ({ reverse, children }) => {
     <>
       <div data-aos="fade-up-right" className="panel__parent">
         <div className="panel__img-parent">
-          <img src={Photo1} alt="photo1" />
+          <img src={Photo1New} alt="photo1" />
         </div>
         <div className="panel__content-parent">
           <h2>01</h2>
