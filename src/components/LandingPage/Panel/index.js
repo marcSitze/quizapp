@@ -22,14 +22,14 @@ const Panel = ({ reverse, children }) => {
         </div>
         <div className="panel__content-parent">
           <h2>01</h2>
-          <h6>HAIR LOSS</h6>
-          <h5>Hair loss needn’t be irreversible. We can help!</h5>
+          {/* <h6>HAIR LOSS</h6> */}
+          <h5>BIOGRAPHIE DE L’AUTEUR.</h5>
           <p>
-            Hair loss needn’t be irreversible. There’s a scientifically proven
-            way that’s most effective in keeping and regrowing your hair. It’s
-            all to do with blocking a pesky hormone called DHT. That’s the bad
-            guy behind hair loss. And you can keep him at bay. The choice is
-            yours.
+            Dieu l’a béni avec une merveilleuse femme qui prend Dieu au sérieux
+            dans sa vie, avec trois enfants qu’ils ont la charge de bâtir pour
+            les préparer à une vie d’adulte au service du Royaume de Dieu, de
+            leur pays le Cameroun, de leur famille, et partout où Dieu les
+            placera.
           </p>
         </div>
       </div>
@@ -37,12 +37,14 @@ const Panel = ({ reverse, children }) => {
       <div data-aos="fade-down-right" className="second__parent">
         <div className="second__content-parent">
           <h2>02</h2>
-          <h6>Erectile Dysfunction</h6>
-          <h5>Erections can be a tricky thing. But no need to feel down!</h5>
+          {/* <h6>Erectile Dysfunction</h6> */}
+          <h5>APERCU DE L’OUVRAGE « OSEZ LA RIGUEUR »</h5>
           <p>
-            There are plenty of reasons why you might be having difficulty in
-            the erection department. We can help you figure out possible reasons
-            why. And prescribe a pill if needed.
+            Osez la Rigueur est plus qu’un livre. C’est une invitation à
+            transformer tout ce que vous accomplissez en un chef-d’œuvre au
+            service des autres. Avec sincérité, authenticité et humilité,
+            l’auteur vous guide dans un voyage passionnant vers l’excellence, la
+            générosité et la satisfaction.
           </p>
         </div>
 

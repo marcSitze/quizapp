@@ -5,6 +5,7 @@ import './index.scss';
 
 //import logo
 import logo from '../../../assets/svg/logo.svg';
+import logoNew from '../../../assets/images/logoNew.png';
 
 const LandingHeader = ({ history }) => {
   const handleTakeQuizClick = () => {
@@ -14,15 +15,18 @@ const LandingHeader = ({ history }) => {
   return (
     <div className="header__wrapper">
       <div className="header__center">
-        <img src={logo} alt="logo" />
+        <img src={logoNew} style={{ width: 150 }} alt="logo" />
 
         <div className="header__content">
-          <h1>BE GOOD</h1>
-          <h1>TO YOURSELF</h1>
+          <h1>RIGORSCORE</h1>
+          {/* <h1>TO YOURSELF</h1> */}
 
           <p>
-            We’re working around the clock to bring you a holistic approach to
-            your wellness. From top to bottom, inside and out.
+            Osez la Rigueur est plus qu’un livre. C’est une invitation à
+            transformer tout ce que vous accomplissez en un chef-d’œuvre au
+            service des autres. Avec sincérité, authenticité et humilité,
+            l’auteur vous guide dans un voyage passionnant vers l’excellence, la
+            générosité et la satisfaction.
           </p>
 
           <button onClick={handleTakeQuizClick}>TAKE THE QUIZ</button>

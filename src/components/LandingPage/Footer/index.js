@@ -1,7 +1,8 @@
 import React from 'react';
 
 //import logo
-import logo__footer from '../../../assets/images/logo_footer.png';
+// import logo__footer from '../../../assets/images/logo_footer.png';
+import logo__footer_new from '../../../assets/images/logoNew.png';
 
 //import social media icons
 import fb from '../../../assets/images/fb.png';
@@ -13,7 +14,7 @@ import './style.scss';
 const Footer = () => {
   return (
     <footer>
-      <img className="logo" src={logo__footer} alt="footer__logo" />
+      <img className="logo" src={logo__footer_new} alt="footer__logo" />
 
       <div className="footer__links">
         <div className="footer__link">
@@ -43,13 +44,19 @@ const Footer = () => {
         </div>
 
         <div className="footer__link social-media">
-          <h3 className="footer__link__title">FOLLOW US</h3>
-
-          <div className="social_media_icons">
+          <h3 className="footer__link__title">APPRECIATION DE L’OUVRAGE</h3>
+          <p>
+            « J’ai eu l’honneur et le privilège de lire et de dévorer votre
+            ouvrage Osez la Rigueur…J’en sors pleinement édifié et j’ai eu le
+            sentiment par moments que l’ouvrage s’adressait directement à moi et
+            donc, j’entrevois la nécessité d’ajuster les choses dans mon
+            quotidien à plusieurs égards. »
+          </p>
+          {/* <div className="social_media_icons">
             <img src={fb} alt="facebook" />
             <img className="twt" src={tw} alt="twitter" />
             <img src={inn} alt="linkedIn" />
-          </div>
+          </div> */}
         </div>
       </div>
 
