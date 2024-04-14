@@ -22,11 +22,20 @@ const LandingHeader = ({ history }) => {
           {/* <h1>TO YOURSELF</h1> */}
 
           <p>
-            Osez la Rigueur est plus qu’un livre. C’est une invitation à
-            transformer tout ce que vous accomplissez en un chef-d’œuvre au
-            service des autres. Avec sincérité, authenticité et humilité,
-            l’auteur vous guide dans un voyage passionnant vers l’excellence, la
-            générosité et la satisfaction.
+            Positionnez-Vous Au Bon Endroit Pour Bien Accomplir Votre Travail.
+            Pour cultiver l’excellence et transformer votre environnement par la
+            performance, vous avez besoin de l’attitude mentale pour y arriver.
+            Recevez une clarté instantanée grâce au RigorScore™ Assessment, pour
+            savoir si vous êtes une personne légère dans votre travail,
+            rigoureuse ou perfectionniste. Comment Ça Marche ? Vous choisirez la
+            phrase qui vous décrit le mieux à travers les trois catégories :
+            légèreté, rigueur et perfectionnisme. Il y a environ 28 questions en
+            tout. Lorsque vous aurez terminé, vous recevrez votre unique
+            RigorScore™ sur la base de la catégorie qui a obtenu le plus de
+            point. Alors vous aurez la clarté pour mieux vous situer et prendre
+            les choix appropriés pour améliorer votre rigueur, ou simplement la
+            renforcer. L’évaluation vous prendra entre 5 à 10 minutes. En y
+            répondant objectivement, cela vous apportera plus de valeur
           </p>
 
           <button onClick={handleTakeQuizClick}>TAKE THE QUIZ</button>

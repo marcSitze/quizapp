@@ -10,7 +10,7 @@ export default function LandingPage() {
   return (
     <>
       <Header />
-      <Title>What we can help with</Title>
+      <Title>OSEZ LA RIGUEUR</Title>
 
       <PanelWrapper>
         <Panel />

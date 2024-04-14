@@ -37,17 +37,19 @@
     line-height: 32px;
     color: $titleColor;
     font-weight: 100;
-    width: 250px;
+    // width: 250px;
+    text-align: center;
   }
 
   p {
-    width: 300px;
+    width: 100%;
     font-size: 12px;
     line-height: 22px;
     letter-spacing: 0;
     font-family: $sans;
     font-weight: bold;
     color: $titleColor;
+    text-align: center;
   }
 
   h2 {
@@ -144,22 +146,22 @@
     line-height: 32px;
     color: $titleColor;
     font-weight: 100; // de modificat
-    width: 311px;
-    margin-left: 135px;
-    padding-right: 75px;
-    text-align: right;
+    width: 100%;
+    // margin-left: 135px;
+    // padding-right: 75px;
+    text-align: center;
   }
 
   p {
-    width: 300px;
+    width: 100%;
     font-size: 12px;
     line-height: 22px;
     letter-spacing: 0;
     font-family: $sans;
     font-weight: bold;
     color: $titleColor;
-    margin-left: 65px;
-    text-align: right;
+    // margin-left: 65px;
+    text-align: center;
   }
 
   h2 {
