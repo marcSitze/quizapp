@@ -11,6 +11,11 @@ export default function LandingPage() {
     <>
       <Header />
       <Title>OSEZ LA RIGUEUR</Title>
+      <p style={{ textAlign: 'center' }}>
+        {' '}
+        COMMENT CULTIVER L’EXCELLENCE ET TRANSFORMER VOTRE ENVIRONNEMENT PAR LA
+        PERFORMANCE.
+      </p>
 
       <PanelWrapper>
         <Panel />

@@ -14,9 +14,18 @@ import './style.scss';
 const Footer = () => {
   return (
     <footer>
-      <img className="logo" src={logo__footer_new} alt="footer__logo" />
-
-      <div className="footer__links">
+      {/* <img className="logo" src={logo__footer_new} alt="footer__logo" /> */}
+      <br />
+      <div>
+        <p style={{ textAlign: 'center' }}>
+          « J’ai eu l’honneur et le privilège de lire et de dévorer votre
+          ouvrage Osez la Rigueur…J’en sors pleinement édifié et j’ai eu le
+          sentiment par moments que l’ouvrage s’adressait directement à moi et
+          donc, j’entrevois la nécessité d’ajuster les choses dans mon quotidien
+          à plusieurs égards. »
+        </p>
+      </div>
+      {/* <div className="footer__links">
         <div className="footer__link">
           <h3 className="footer__link__title">PRUDUCT</h3>
           <a href="/">Popular</a>
@@ -52,17 +61,19 @@ const Footer = () => {
             donc, j’entrevois la nécessité d’ajuster les choses dans mon
             quotidien à plusieurs égards. »
           </p>
-          {/* <div className="social_media_icons">
+          <div className="social_media_icons">
             <img src={fb} alt="facebook" />
             <img className="twt" src={tw} alt="twitter" />
             <img src={inn} alt="linkedIn" />
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
 
       <hr />
 
-      <h6 className="copyr">© 2019 Manual. All rights reserved.</h6>
+      <h6 className="copyr">
+        {new Date().getFullYear()} Ealiaconseil. Allrights…
+      </h6>
     </footer>
 
     //&copy;
