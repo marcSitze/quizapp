@@ -9,7 +9,11 @@ import getKeyWithHighestValue from '../../utils/getKeyWithHighestValue';
 
 export default function QuizResult() {
   const results = useStore((state) => state.results);
-  const [value, setValue] = useState('');
+  const [values, setValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+  });
   const [isSend, setIsSend] = useState(false);
 
   const quizResult = React.useMemo(() => {
@@ -34,15 +38,15 @@ export default function QuizResult() {
   const sendEmail = async (e) => {
     e.preventDefault();
     const templateParams = {
-      to_name: 'James',
-      to_email: value,
-      from_name: 'Marc',
+      to_name: `${values.firstName} ${values.lastName}`,
+      to_email: values.email,
+      from_name: 'Rigoscore',
       message: `Voici votre resultat: ${getResult(
         getKeyWithHighestValue(results),
       )}`,
     };
 
-    if (value) {
+    if (values.email) {
       emailjs
         .send(
           'service_8atuzzc',
@@ -54,7 +58,7 @@ export default function QuizResult() {
           (result) => {
             // console.log(result.text);
             // console.log('message sent!');
-            saveEmail(value);
+            saveEmail(values.email);
             setIsSend(true);
           },
           (error) => {
@@ -65,7 +69,15 @@ export default function QuizResult() {
         );
     }
     console.log('clicked...');
+    setValues({
+      firstName: '',
+      lastName: '',
+      email: '',
+    });
   };
+
+  const handleChange = (e) =>
+    setValues({ ...values, [e.target.name]: e.target.value });
 
   return (
     <>
@@ -77,7 +89,7 @@ export default function QuizResult() {
         <div
           style={{ display: 'flex', flexDirection: 'column', marginTop: 20 }}
         >
-          <span style={{ marginBottom: 20 }}>
+          <span style={{ marginBottom: 20, marginTop: 40 }}>
             Great news! We have the perfect match for you. just enter your email
             to receive your results
           </span>
@@ -107,24 +119,6 @@ export default function QuizResult() {
               </p>
             </div>
           </div> */}
-          <div style={{ display: 'flex' }}>
-            <input
-              style={{
-                width: 300,
-                height: 54,
-                border: '1px solid rgb(200, 200, 200)',
-                fontSize: 22,
-                padding: '10px 20px',
-                outline: 'none',
-              }}
-              placeholder="example@gmail.com"
-              type="email"
-              name="email"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            />
-            <button onClick={sendEmail}>Submit</button>
-          </div>
           {isSend && (
             <p
               style={{
@@ -140,6 +134,50 @@ export default function QuizResult() {
           )}
         </div>
       </h1>
+
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstName"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastName"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              value={values.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Submit" onClick={sendEmail} />
+          </div>
+        </form>
+      </div>
     </>
   );
 }
