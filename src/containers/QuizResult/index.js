@@ -6,9 +6,13 @@ import emailjs from '@emailjs/browser';
 import { saveEmail } from '../../services/email';
 import getResult from '../../utils/getResult';
 import getKeyWithHighestValue from '../../utils/getKeyWithHighestValue';
+import Spinner from '../../assets/images/spinner.gif';
+import Popup from '../../components/Popup';
 
 export default function QuizResult() {
   const results = useStore((state) => state.results);
+  const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [values, setValues] = useState({
     firstName: '',
     lastName: '',
@@ -37,6 +41,7 @@ export default function QuizResult() {
   }, []);
   const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const templateParams = {
       to_name: `${values.firstName} ${values.lastName}`,
       to_email: values.email,
@@ -60,20 +65,23 @@ export default function QuizResult() {
             // console.log('message sent!');
             saveEmail(values.email);
             setIsSend(true);
+            setValues({
+              firstName: '',
+              lastName: '',
+              email: '',
+            });
+            setLoading(false);
+            setIsOpen(true);
           },
           (error) => {
             // console.log(error.text);
             // console.log('error sending message, try again!');
             setIsSend(false);
+            setLoading(false);
           },
         );
     }
     console.log('clicked...');
-    setValues({
-      firstName: '',
-      lastName: '',
-      email: '',
-    });
   };
 
   const handleChange = (e) =>
@@ -82,7 +90,7 @@ export default function QuizResult() {
   return (
     <>
       <Link to="/" className="back__link">
-        Back
+        Home
       </Link>
 
       <h1 className="quiz__result-message">
@@ -119,24 +127,11 @@ export default function QuizResult() {
               </p>
             </div>
           </div> */}
-          {isSend && (
-            <p
-              style={{
-                margin: 0,
-                padding: '20px 0 0 10px',
-                lineHeight: 0,
-                fontSize: 14,
-                color: 'green',
-              }}
-            >
-              Email Sent Successfully
-            </p>
-          )}
         </div>
       </h1>
 
       <div class="contact-form">
-        <h2>Contact Us</h2>
+        <h2>Obtenir Vos resultats</h2>
         <form action="#" method="post">
           <div class="form-group">
             <label for="firstname">First Name:</label>
@@ -144,6 +139,7 @@ export default function QuizResult() {
               type="text"
               id="firstname"
               name="firstName"
+              value={values.firstName}
               onChange={handleChange}
               required
             />
@@ -155,6 +151,7 @@ export default function QuizResult() {
               type="text"
               id="lastname"
               name="lastName"
+              value={values.lastName}
               onChange={handleChange}
               required
             />
@@ -174,8 +171,21 @@ export default function QuizResult() {
           </div>
 
           <div class="form-group">
-            <input type="submit" value="Submit" onClick={sendEmail} />
+            <button
+              type="submit"
+              // value="Submit"
+              style={{ backgroundColor: loading ? 'lightgray' : '#0080c4' }}
+              onClick={sendEmail}
+              disabled={loading || values.email.length < 5}
+            >
+              {loading ? (
+                <img src={Spinner} width={25} height={25} alt="spinner" />
+              ) : (
+                'Submit'
+              )}
+            </button>
           </div>
+          {isSend && <Popup onClose={(data) => setIsOpen(!data)} />}
         </form>
       </div>
     </>

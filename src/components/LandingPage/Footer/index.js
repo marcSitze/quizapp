@@ -16,13 +16,17 @@ const Footer = () => {
     <footer>
       {/* <img className="logo" src={logo__footer_new} alt="footer__logo" /> */}
       <br />
-      <div>
-        <p style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
+        <p style={{ marginBottom: 10 }}>APPRECIATION DE L’OUVRAGE</p>
+        <p style={{ textAlign: 'center', marginBottom: 10 }}>
           « J’ai eu l’honneur et le privilège de lire et de dévorer votre
           ouvrage Osez la Rigueur…J’en sors pleinement édifié et j’ai eu le
           sentiment par moments que l’ouvrage s’adressait directement à moi et
           donc, j’entrevois la nécessité d’ajuster les choses dans mon quotidien
           à plusieurs égards. »
+        </p>
+        <p style={{ fontWeight: 'bolder' }}>
+          Gilbert Roberto ELONG KIYE, Master en Traduction
         </p>
       </div>
       {/* <div className="footer__links">
