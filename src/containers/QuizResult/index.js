@@ -88,18 +88,22 @@ export default function QuizResult() {
     setValues({ ...values, [e.target.name]: e.target.value });
 
   return (
-    <>
-      <Link to="/" className="back__link">
-        Home
-      </Link>
+    <div style={{ paddingBottom: 20, paddingTop: 20 }}>
+      <div style={{ marginBottom: 10, marginTop: -5 }}>
+        <Link to="/" className="back__link">
+          Home
+        </Link>
+      </div>
 
       <h1 className="quiz__result-message">
         <div
           style={{ display: 'flex', flexDirection: 'column', marginTop: 20 }}
         >
-          <span style={{ marginBottom: 20, marginTop: 40 }}>
-            Great news! We have the perfect match for you. just enter your email
-            to receive your results
+          <span
+            style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}
+          >
+            Excellente nouvelle ! Nous avons la personne idéale pour vous.
+            Saisissez votre adresse e-mail pour recevoir vos résultats.
           </span>
           {/* <div
             style={{
@@ -185,9 +189,16 @@ export default function QuizResult() {
               )}
             </button>
           </div>
-          {isSend && <Popup onClose={(data) => setIsOpen(!data)} />}
+          {isSend && (
+            <Popup
+              onClose={(data) => {
+                setIsOpen(!data);
+                setIsSend(false);
+              }}
+            />
+          )}
         </form>
       </div>
-    </>
+    </div>
   );
 }

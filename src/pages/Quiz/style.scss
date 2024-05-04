@@ -10,7 +10,7 @@
 
   @include bigPhoneAndUp {
     padding: 0 5rem 0 5rem;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .quiz__action {

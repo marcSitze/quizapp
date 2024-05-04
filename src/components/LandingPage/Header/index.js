@@ -38,7 +38,7 @@ const LandingHeader = ({ history }) => {
             répondant objectivement, cela vous apportera plus de valeur
           </p>
 
-          <button onClick={handleTakeQuizClick}>TAKE THE QUIZ</button>
+          <button onClick={handleTakeQuizClick}>FAITES LE TEST</button>
         </div>
       </div>
     </div>
