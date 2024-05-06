@@ -14,6 +14,396 @@
           "Je respecte les attentes des autres dans mon travail, et je considère qu’ils ne m’aiment pas lorsqu’ils m’apportent des critiques.": 3
         }
       ]
+    },
+    {
+      "question": "Comment vous comportez-vous lorsque vous devez travailler sur un projet ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je préfère qu’on me dise quoi faire.": 1
+        },
+        {
+          "Je suis intentionnel(le) par rapport à ce qui se passe autour de moi.": 2
+        },
+        {
+          "Je préfère garder le contrôle sur ce qu’il y a à faire.": 3
+        }
+      ]
+    },
+    {
+      "question": "Quand vous travaillez sur un projet, comment considérez-vous l’avis des autres ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je demande souvent l’avis des gens et je sais que je n’en ferai pas grand-chose.": 1
+        },
+        {
+          "Sans l’avis des autres, je pense que je n’aurai pas toujours de meilleurs résultats.": 2
+        },
+        {
+          "Je n’ai pas besoin de l’avis des autres. Mes idées suffisent.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment réagissez-vous face à une nouvelle situation ou imprévue au travail ou à la maison ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je prends rarement des initiatives.": 1
+        },
+        {
+          "Je prends toujours des initiatives attendues de moi.": 2
+        },
+        {
+          "J’aime prendre la place des gens et faire leur travail.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment choisissez-vous la meilleure option parmi plusieurs alternatives ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je laisse souvent que les autres décident à ma place là où je dois décider.": 1
+        },
+        {
+          "Je décide grâce à mes valeurs, et je tiens compte des conseils.": 2
+        },
+        {
+          "Je me base sur les critères de performance et l’avis des autres dans la décision réduit ma valeur propre.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment vous sentez-vous par rapport à votre travail ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je le fais sans trop de passion ni d’engagement, juste ce qu’il faut pour remplir mes obligations.": 1
+        },
+        {
+          "Je le fais avec enthousiasme et sérieux, en cherchant à donner le meilleur de moi-même.": 2
+        },
+        {
+          "Je le fais avec anxiété et en me surpassant, craignant de ne pas être à la hauteur.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment réagissez-vous face à une erreur ou à un défaut dans votre travail ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je ne m’en préoccupe pas trop et je passe à autre chose. Il y a des gens qui vont s’en occuper.": 1
+        },
+        {
+          "Je l’accepte comme une occasion d’apprendre et je corrige ce qui est nécessaire.": 2
+        },
+        {
+          "Je me sens coupable et frustré et je cherche à tout prix à l’éliminer.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment vous décririez-vous par rapport aux attentes de votre travail ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je fais le strict nécessaire pour remplir mes tâches, sans chercher à me dépasser.": 1
+        },
+        {
+          "Je chercher toujours à dépasser les standards de qualité et à me perfectionner.": 2
+        },
+        {
+          "Je me considère comme le meilleur dans mon domaine et je n’accepte aucune critique.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment approchez-vous l’amélioration dans ce que vous faites ? ",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je crois que je suis déjà bon dans ce que je fais.": 1
+        },
+        {
+          "Je travaille toujours avec le cœur, et je veux m’améliorer.": 2
+        },
+        {
+          "Pas question de m’améliorer. Soit c’est cela, soit ce n’est pas cela.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment vous comportez-vous lorsque les choses ne vont pas comme vous l’aviez prévu ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Ce n’est pas de ma faute si nous sommes arrivé(e)s à ce résultat.": 1
+        },
+        {
+          "Je reconnais lorsque quelque chose tourne mal et je cherche pourquoi pour me corriger.": 2
+        },
+        {
+          "Je m’irrite toujours de façon explosive lorsque quelque chose tourne mal.": 3
+        }
+      ]
+    },
+    {
+      "question": "Quelle est votre attitude face au risque et à l’incertitude ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je ne veux pas prendre des risques, car cela pourrait m’embarquer dans l’inconnu.": 1
+        },
+        {
+          "Les erreurs font partie de la vie et je donne le meilleur de moi pour les réduire.": 2
+        },
+        {
+          "Je ne veux pas prendre des risques car je pourrais me tromper.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment conciliez-vous la bienveillance et la rigueur dans vos relations professionnelles ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Ceux qui disent toujours bien faire leur travail sont prétentieux et même orgueilleux.": 1
+        },
+        {
+          "Je suis plein(e) de grâce envers les autres, tout en leur rappelant mes exigences et attentes envers eux.": 2
+        },
+        {
+          "Je suis meilleur(e) et supérieur(e) aux autres. Ils doivent me suivre.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment évaluez-vous le niveau d’effort requis pour accomplir vos tâches et prioriser vos actions ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je définis rarement le niveau d’effort dans les actions que je mène.": 1
+        },
+        {
+          "Je définis le niveau d’effort pour chaque activité que je mène selon son importance.": 2
+        },
+        {
+          "Tout a le même niveau d’importance pour moi et nécessite le même degré d’effort.": 3
+        }
+      ]
+    },
+    {
+      "question": "Quelle est votre niveau de motivation dans chaque travail que vous faites ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je désire parfois atteindre des résultats qui vont au-delà des attentes.": 1
+        },
+        {
+          "Je travaille chaque fois pour atteindre les résultats qui vont au-delà des attentes.": 2
+        },
+        {
+          "Je me sens obligé(e) d’atteindre des résultats qui vont au-delà des attentes.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment gérez-vous les situations où vous devez faire face à des opinions ou des attentes différentes des vôtres ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je préfère que tout le monde soit d’accord avec moi.": 1
+        },
+        {
+          "Je suis humain et je sais faire des choix courageux.": 2
+        },
+        {
+          "Je crois que ce qui est raisonnable ne s’applique pas à moi.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment décririez-vous votre leadership, et l’adaptez-vous aux autres ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je préfère rester moi-même.": 1
+        },
+        {
+          "J’ai des standards et j’inspire les autres à me suivre.": 2
+        },
+        {
+          "Je crois que mes standards ne peuvent pas être reproduits par les autres.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment équilibrez-vous entre l’action et la réflexion dans votre processus de prise de décision ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je passe simplement à l’action, car prendre du recul me fait perdre du temps.": 1
+        },
+        {
+          "Après réflexion, je passe à l’action même si je n’ai pas toutes les réponses.": 2
+        },
+        {
+          "Je fais preuve de prudence excessive avant d’engager quoi que ce soit.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment ce que les autres pensent affecte votre état d’esprit autour du travail.",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je m’en fou de l’opinion que les gens ont sur la qualité de mon travail, qu’elle soit bonne ou mauvaise. Ce qui compte c’est ce que je veux.": 1
+        },
+        {
+          "Bien faire tout ce que je touche ou entreprend est la meilleure manière de montrer mon amour et mon service aux autres, sans qu’ils aient besoin de dire quoi que ce soit.": 2
+        },
+        {
+          "La meilleure manière d’empêcher que les gens soient mécontents de moi c’est de toujours dépasser leurs attentes.": 3
+        }
+      ]
+    },
+    {
+      "question": "Quel est votre niveau d’estime de soi et comment cela influence-t-il votre performance ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je doute de mes compétences et je me contente de faire le minimum. Je crains de ne pas être à la hauteur et de décevoir les autres": 1
+        },
+        {
+          "Je suis convaincu(e) que je peux dépasser les attentes et réaliser des exploits. Je vois chaque défi comme une opportunité de m’améliorer et faire la différence. ": 2
+        },
+        {
+          "J’imagine qu’il y aura une catastrophe si je ne vais pas au-delà des attentes.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment gérez-vous votre autorégulation pour une meilleure performance dans ce que vous faites ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "J’ai du mal à m’améliorer, et à m’intéresser. Je peine à gérer mon temps, mon énergie, mon attention et ma volonté.": 1
+        },
+        {
+          "Je trouve toujours le moyen de m’organiser, de me ressourcer, de me concentrer et de me motiver.": 2
+        },
+        {
+          "Je suis frustré(e) lorsque je n’ai pas le temps, l’énergie, l’attention ou la volonté pour accomplir quelque chose.": 3
+        }
+      ]
+    },
+    {
+      "question": "Quel est votre niveau de discipline personnelle par rapport à vos bonnes habitudes ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je suis souvent agacé(e) lorsque je néglige mes bonnes habitudes. Je sais que c’est dommageable pour mon avancement et mon harmonie. Je me laisse aller à des écarts fréquents, mais je m’en veux après.": 1
+        },
+        {
+          "Je suis satisfait(e) lorsque je suis régulièrement mes bonnes habitudes. Je pense que c’est important pour mon progrès et mon équilibre. J’accepte quelques écarts occasionnels, mais je me remets vite sur les rails.": 2
+        },
+        {
+          "Je suis fier(e) lorsque je respecte scrupuleusement mes bonnes habitudes. Je considère que c’est la clé de mon succès et de mon bien-être. Je ne tolère aucun écart ni aucune excuse.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment réagissez-vous à de nouveaux objectifs ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je suis stressé(e) par l’accomplissement de nouveaux objectifs. Je me laisse déborder par des projets trop complexes ou trop nombreux, avec une faible confiance en ma possibilité de réussir.": 1
+        },
+        {
+          "Je suis passionné(e) par l’accomplissement de nouveaux objectifs. Je n’hésite pas à me lancer dans des projets ambitieux et stimulants sans peur d’échouer.": 2
+        },
+        {
+          "Dans l’accomplissement de nouveaux objectifs, j’embrasse plus que je ne peux gérer.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment gérez-vous l’incertitude dans le choix de vos objectifs ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je suis trop hésitant(e) dans le choix de mes objectifs, et je me retiens de commencer des projets qui me tentent mais qui me font peur.": 1
+        },
+        {
+          "Je suis très sélectif(ve) dans le choix de mes objectifs, et je me lance dès lors que le potentiel de succès est possible.": 2
+        },
+        {
+          "J’évite de commencer quoi que ce soit à moins d’être sûrs à 100% d’accomplir mes objectifs.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment gérez-vous les changements dans vos disciplines ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je suis coincé(e) dans certaines disciplines qui ne me conviennent plus. Je suis curieux(se) d’autres méthodes, mais j’ai peur de changer.": 1
+        },
+        {
+          "Je reste attaché(e) à certaines disciplines qui m’ont été utiles à un moment donné, et pense qu’elles ont encore de la valeur et du sens. Je reste ouvert(e) à d’autres approches, mais je reste prudent.": 2
+        },
+        {
+          "Je suis fidèle à certaines disciplines qui m’ont apporté des bénéfices par le passé, et considère qu’elles sont intemporelles et universelles. Je ne me laisse pas influencé par les modes ou les opinions.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment gérez-vous les critiques dans vos activités ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je reconnais que l’erreur est humaine, et je cherche aussi les erreurs de tous ceux qui me critiquent pour me défendre.": 1
+        },
+        {
+          "Je reconnais que l’erreur est humaine, que je serai critiqué, mais je ne laisse pas cela m’anéantir.": 2
+        },
+        {
+          "J’aime être applaudi quand je fais bien, mais je ne supporte pas les critiques lorsque j’échoue, et je me blâme intérieurement.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment choisissez-vous vos idées ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je saute sur toutes les idées qui font tendance, et que la plupart des gens poursuivent.": 1
+        },
+        {
+          "Je suis attiré(e) par des idées qui me challengent, et je recherche le meilleur processus possible pour les exécuter.": 2
+        },
+        {
+          "Je suis passionné(e) par des idées parfaites. Je considère que c’est le signe de mon excellence et de ma créativité.": 3
+        }
+      ]
+    },
+    {
+      "question": "Comment vivez-vous votre imperfection ?",
+      "type": "ChoiceType",
+      "options": [
+        {
+          "Je comprends que je ne suis pas parfait(e), et j’utilise cela pour justifier tous mes manquements.": 1
+        },
+        {
+          "Je comprends que je n’ai pas besoin d’être parfait(e), que je dois simplement faire ce que je peux au meilleur de mes habiletés, ma passion et mon énergie.": 2
+        },
+        {
+          "Je déteste l’idée que je ne sois pas parfait(e), et je pense que c’est un obstacle pour mon avenir et mon estime.": 3
+        }
+      ]
     }
   ]
 }
