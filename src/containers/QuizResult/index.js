@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { saveEmail } from '../../services/email';
 import getResult from '../../utils/getResult';
 import getKeyWithHighestValue from '../../utils/getKeyWithHighestValue';
+import findMostOccurringValue from '../../utils/findMostOccuringValue';
 import Spinner from '../../assets/images/spinner.gif';
 import Popup from '../../components/Popup';
 
@@ -35,9 +36,16 @@ export default function QuizResult() {
   // toast.success('Email with your responses sent!');
 
   useEffect(() => {
-    console.log('tosend: ', getResult(getKeyWithHighestValue(results)));
-    console.log('tosend2: ', getKeyWithHighestValue(results));
-    console.log('tosend3: ', results);
+    // console.log();
+    // console.log(
+    //   'Re: ',
+    //   getResult(
+    //     Number(getKeyWithHighestValue(findMostOccurringValue(results))),
+    //   ),
+    // );
+    // console.log('tosend: ', getResult(getKeyWithHighestValue(results)));
+    // console.log('tosend2: ', getKeyWithHighestValue(results));
+    // console.log('tosend3: ', results);
   }, []);
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -47,14 +55,14 @@ export default function QuizResult() {
       to_email: values.email,
       from_name: 'Rigoscore',
       message: `Voici votre resultat: ${getResult(
-        getKeyWithHighestValue(results),
+        Number(getKeyWithHighestValue(findMostOccurringValue(results))),
       )}`,
     };
 
     if (values.email) {
       emailjs
         .send(
-          'service_8atuzzc',
+          'service_8fvarg9',
           'template_hfp2t2g',
           templateParams,
           'WRPNTni4bSD_a6FeM',
@@ -63,7 +71,7 @@ export default function QuizResult() {
           (result) => {
             // console.log(result.text);
             // console.log('message sent!');
-            saveEmail(values.email);
+            saveEmail(values);
             setIsSend(true);
             setValues({
               firstName: '',
@@ -102,8 +110,8 @@ export default function QuizResult() {
           <span
             style={{ marginBottom: 20, marginTop: 40, textAlign: 'center' }}
           >
-            Excellente nouvelle ! Nous avons la personne idéale pour vous.
-            Saisissez votre adresse e-mail pour recevoir vos résultats.
+            Excellente nouvelle ! Nous avons le meilleur conseil pour vous.
+            Saisissez votre adresse e-mail pour le recevoir.
           </span>
           {/* <div
             style={{

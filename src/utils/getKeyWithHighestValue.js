@@ -1,19 +1,15 @@
 function getKeyWithHighestValue(obj) {
-  let highestKey = null;
-  let highestValue = -Infinity;
+  let maxKey = null;
+  let maxValue = Number.MIN_SAFE_INTEGER;
 
-  // Iterate over the object
   for (const key in obj) {
-      const value = obj[key];
-
-      // Update highestKey if value is greater than highestValue
-      if (value > highestValue) {
-          highestValue = value;
-          highestKey = key;
-      }
+    if (obj[key] > maxValue) {
+      maxValue = obj[key];
+      maxKey = key;
+    }
   }
 
-  return highestKey;
+  return maxKey;
 }
 
-export default getKeyWithHighestValue
+export default getKeyWithHighestValue;
