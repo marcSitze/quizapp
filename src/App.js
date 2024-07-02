@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/LandingNew';
 import Quiz from './pages/Quiz';
 import './styles/global.scss';
 
