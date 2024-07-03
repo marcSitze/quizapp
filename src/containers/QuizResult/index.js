@@ -9,6 +9,7 @@ import getKeyWithHighestValue from '../../utils/getKeyWithHighestValue';
 import findMostOccurringValue from '../../utils/findMostOccuringValue';
 import Spinner from '../../assets/images/spinner.gif';
 import Popup from '../../components/Popup';
+import getResultText from '../../utils/getResultText';
 
 export default function QuizResult() {
   const results = useStore((state) => state.results);
@@ -54,9 +55,12 @@ export default function QuizResult() {
       to_name: `${values.firstName} ${values.lastName}`,
       to_email: values.email,
       from_name: 'Rigoscore',
-      message: `Voici votre resultat: ${getResult(
+      title: getResult(
         Number(getKeyWithHighestValue(findMostOccurringValue(results))),
-      )}`,
+      ),
+      message: getResultText(
+        Number(getKeyWithHighestValue(findMostOccurringValue(results))),
+      ),
     };
 
     if (values.email) {
@@ -186,14 +190,14 @@ export default function QuizResult() {
             <button
               type="submit"
               // value="Submit"
-              style={{ backgroundColor: loading ? 'lightgray' : '#0080c4' }}
+              style={{ backgroundColor: loading ? '#d2922b41' : '#d2922b' }}
               onClick={sendEmail}
               disabled={loading || values.email.length < 5}
             >
               {loading ? (
                 <img src={Spinner} width={25} height={25} alt="spinner" />
               ) : (
-                'Submit'
+                'Soumettre'
               )}
             </button>
           </div>

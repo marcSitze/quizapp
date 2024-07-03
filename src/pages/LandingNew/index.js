@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import AssessmentImage from '../images/assessment-image.png';
+import QuizImage from '../../assets/images/quizz.png';
 
 const LandingNew = () => {
   return (
@@ -9,14 +10,18 @@ const LandingNew = () => {
       <div className="container">
         <div className="overlay">
           <div className="content">
-            <h1 className="title">Set Goals Where You Need Them Most</h1>
+            <h1 className="title">
+              Positionnez-Vous Au Bon Endroit Pour Bien Accomplir Votre Travail.
+            </h1>
             <p className="description">
-              To design a picture-perfect year, you need goals in different
-              areas of life. Receive instant clarity on what areas of your life
-              need improvement with the Full Focus LifeScore™ Assessment.
+              Pour cultiver l’excellence et transformer votre environnement par
+              la performance, vous avez besoin de l’attitude mentale pour y
+              arriver. Recevez une clarté instantanée grâce au RigorScore™
+              Assessment, pour savoir si vous êtes une personne légère dans
+              votre travail, rigoureuse ou perfectionniste.
             </p>
             <Link to="/quiz">
-              <button className="cta-button">Get Started</button>
+              <button className="cta-button">Commencer</button>
             </Link>
           </div>
         </div>
@@ -24,25 +29,31 @@ const LandingNew = () => {
       <div className="how-it-works">
         <div className="how-it-works-content">
           <img
-            src={AssessmentImage}
+            src={QuizImage}
             alt="LifeScore Assessment"
             className="assessment-image"
           />
           <div className="how-it-works-text">
-            <h2>How It Works</h2>
+            <h2>Comment Ça Marche ?</h2>
             <p>
-              You'll choose phrases that best describe you across nine different
-              life domains: body, mind, spirit, love, family, community, money,
-              work, and hobbies. There are up to 45 questions total.
+              Vous choisirez la phrase qui vous décrit le mieux à travers les
+              trois catégories : légèreté, rigueur et perfectionnisme.
             </p>
             <p>
-              When you're finished, you'll be given a unique LifeScore on a
-              scale from 1-100. Then you'll have the clarity you need to set
-              better goals and have your best year ever.
+              Il y a environ 29 questions en tout. Lorsque vous aurez terminé,
+              vous recevrez votre unique RigorScore™ sur la base de la catégorie
+              qui a obtenu le plus de point. Alors vous aurez la clarté pour
+              mieux vous situer et prendre les choix appropriés pour améliorer
+              votre rigueur, ou simplement la renforcer.
             </p>
-            <p>The assessment will take 5-10 minutes.</p>
+            <p>
+              L’évaluation vous prendra entre 5 à 10 minutes. En y répondant
+              objectivement, cela vous apportera plus de valeur
+            </p>
             <Link to="/quiz">
-              <button className="cta-button">Start Assessment</button>
+              <button className="start-quiz-button">
+                Commencer l'évaluation
+              </button>
             </Link>
           </div>
         </div>
@@ -54,8 +65,8 @@ const LandingNew = () => {
         </div>
         <div className="footer-bottom">
           <p>
-            ©2024 Full Focus | <a href="#">Permissions</a> |{' '}
-            <a href="#">Terms</a> | <a href="#">Privacy</a>
+            ©{new Date().getFullYear()} RigorScore ™
+            {/* <a href="#">Terms</a> | <a href="#">Privacy</a> */}
           </p>
         </div>
       </footer>

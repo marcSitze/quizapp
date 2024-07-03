@@ -18,13 +18,13 @@ function Popup({ onClose }) {
               margin: 0,
               marginBottom: 20,
               padding: '20px 0 0 10px',
-              lineHeight: 0,
               fontSize: 14,
               color: 'green',
               textAlign: 'center',
+              textWrap: 'wrap',
             }}
           >
-            Email Sent Successfully
+            Veuillez vérifier votre courrier pour voir vos résultats
           </p>
           <div
             style={{
@@ -36,7 +36,7 @@ function Popup({ onClose }) {
           >
             <img src={CheckImg} width={'100%'} alt="check img" />
           </div>
-          <button onClick={togglePopup}>Close</button>
+          <button onClick={togglePopup}>Fermer</button>
         </div>
         <div className="popup-overlay" onClick={togglePopup}></div>
       </div>
